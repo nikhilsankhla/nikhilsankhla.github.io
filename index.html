@@ -1,68 +1,142 @@
-<html>
-<body>
-
+<!doctype html>
+<html lang="en">
 <head>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head>
-
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nikhil Sankhla — Security Engineer</title>
+<meta name="description" content="Nikhil Sankhla — security engineer and MSc Cyber Security candidate at UNSW Sydney. Application security, offensive security, and DevSecOps.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-ul {
-    list-style-type: none;
-    margin: 20;
-    padding: 10;
-    overflow: hidden;
-    background-color: #333;
-}
+  :root{
+    --bg:#0a0e17; --panel:#121826; --panel-2:#161d2e; --border:#223049;
+    --text:#e7ecf4; --muted:#8b97ac; --accent:#22d3ee; --accent-2:#a855f7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:radial-gradient(1200px 600px at 50% -10%, #142033 0%, var(--bg) 55%);
+    color:var(--text); font-family:'Inter',system-ui,sans-serif; line-height:1.6;
+    min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:72px 24px 64px}
+  .mono{font-family:'JetBrains Mono',monospace}
 
-li {
-    float: left;
-}
+  header{margin-bottom:44px}
+  .kicker{font-family:'JetBrains Mono',monospace; font-size:.8rem; letter-spacing:.12em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:14px}
+  h1{font-family:'Space Grotesk',sans-serif; font-size:2.7rem; font-weight:700;
+    letter-spacing:-.02em; line-height:1.1; margin-bottom:14px}
+  h1 .dim{color:var(--muted)}
+  .lede{font-size:1.08rem; color:var(--muted); max-width:620px}
+  .lede strong{color:var(--text); font-weight:500}
 
-li a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
+  .actions{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:.62rem 1.05rem;
+    border-radius:10px; font-size:.9rem; font-weight:500; text-decoration:none;
+    border:1px solid var(--border); color:var(--text); transition:.16s; background:var(--panel)}
+  .btn:hover{border-color:var(--accent); color:var(--accent); transform:translateY(-1px)}
+  .btn.primary{background:var(--accent); color:#04141a; border-color:var(--accent); font-weight:600}
+  .btn.primary:hover{background:#5fe0f0; color:#04141a}
 
-li a:hover {
-    background-color: #111;
-}
+  section{margin-top:52px}
+  .sec-title{font-family:'Space Grotesk',sans-serif; font-size:.82rem; font-weight:600;
+    letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin-bottom:20px}
+
+  .grid{display:grid; gap:14px}
+  .card{display:block; padding:20px 22px; background:var(--panel); border:1px solid var(--border);
+    border-radius:14px; text-decoration:none; color:inherit; transition:.16s; position:relative}
+  .card:hover{border-color:var(--accent-2); background:var(--panel-2); transform:translateY(-2px)}
+  .card h3{font-family:'Space Grotesk',sans-serif; font-size:1.12rem; font-weight:600; margin-bottom:6px;
+    display:flex; align-items:center; gap:10px}
+  .card p{color:var(--muted); font-size:.92rem; margin-bottom:12px}
+  .tags{display:flex; flex-wrap:wrap; gap:7px}
+  .tag{font-family:'JetBrains Mono',monospace; font-size:.7rem; color:var(--muted);
+    border:1px solid var(--border); border-radius:6px; padding:2px 8px}
+  .live{font-family:'JetBrains Mono',monospace; font-size:.68rem; font-weight:500; letter-spacing:.05em;
+    color:#04141a; background:var(--accent); border-radius:5px; padding:1px 7px; text-transform:uppercase}
+  .card .go{position:absolute; top:20px; right:22px; color:var(--muted); transition:.16s}
+  .card:hover .go{color:var(--accent-2)}
+
+  .about p{color:var(--muted); margin-bottom:14px}
+  .about p:last-child{margin-bottom:0}
+  .about strong{color:var(--text); font-weight:500}
+
+  footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--border);
+    color:var(--muted); font-size:.85rem; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center}
+  footer a{color:var(--muted); text-decoration:none} footer a:hover{color:var(--accent)}
+  @media (max-width:560px){ h1{font-size:2.1rem} .wrap{padding:48px 20px} }
 </style>
 </head>
 <body>
+<div class="wrap">
 
-<div align="middle">
-	<ul>
-	  <li><a href="index.html">About Me</a></li>
-	  <li><a href="academics.html">Academics</a></li>
-	  <li><a href="professional.html">Professional</a></li>
-	  <li><a href="misc.html">Miscellaneous</a></li>
-	  <li><a href="contact.html">Contact</a></li>
-	  <li><a href="Shweta_Bharti_Resume.pdf" target="_blank">Resume</a></li>
-	</ul>
+  <header>
+    <div class="kicker">Security Engineer · Sydney</div>
+    <h1>Nikhil Sankhla</h1>
+    <p class="lede">
+      I build and break security into software. <strong>MSc Cyber Security</strong> candidate
+      at UNSW Sydney, and previously a <strong>software developer at Dell Technologies</strong>,
+      where I shipped production Python services and embedded security into the CI/CD pipelines
+      that deployed them.
+    </p>
+    <div class="actions">
+      <a class="btn primary" href="https://nikhilsec.com">Full portfolio ↗</a>
+      <a class="btn" href="https://github.com/nikhilsankhla">GitHub</a>
+      <a class="btn" href="mailto:nikhilsankhla.cybersec@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="sec-title">Selected work</div>
+    <div class="grid">
+
+      <a class="card" href="https://github.com/nikhilsankhla/jwt-inspector">
+        <span class="go">→</span>
+        <h3>JWT Inspector</h3>
+        <p>Decode, analyse, crack and forge JSON Web Tokens — the whole JOSE/HMAC stack written
+           from scratch on the Python standard library. 61 tests.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">HMAC</span><span class="tag">AppSec</span></div>
+      </a>
+
+      <a class="card" href="https://nikhilsankhla.github.io/digital-footprint-scanner/">
+        <span class="go">→</span>
+        <h3>Digital Footprint Scanner <span class="live">Live</span></h3>
+        <p>Shows exactly what any website can read from your browser — IP, hardware, GPU and a
+           stable fingerprint — using only standard browser APIs.</p>
+        <div class="tags"><span class="tag">JavaScript</span><span class="tag">WebGL</span><span class="tag">Privacy</span></div>
+      </a>
+
+      <a class="card" href="https://nikhilsankhla.github.io/ai-red-teaming-framework/">
+        <span class="go">→</span>
+        <h3>AI Red Teaming Framework <span class="live">Live</span></h3>
+        <p>Prompt-injection pattern detection and an adversarial test-suite simulation for LLM
+           security — transparent regex heuristics, no model calls.</p>
+        <div class="tags"><span class="tag">LLM Security</span><span class="tag">Prompt Injection</span><span class="tag">Red Team</span></div>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="sec-title">About</div>
+    <p>My focus is application and offensive security: web pentesting across the OWASP Top 10,
+       binary exploitation and fuzzing, wireless attacks, and DevSecOps. I like building the
+       tool rather than just running it — most of my projects are written from scratch to
+       understand how the attack actually works.</p>
+    <p><strong>Currently:</strong> MSc Cyber Security @ UNSW Sydney ·
+       <strong>Open to:</strong> security engineering, application security, and DevSecOps roles.</p>
+  </section>
+
+  <footer>
+    <span>© <span id="y"></span> Nikhil Sankhla</span>
+    <a href="https://nikhilsec.com">nikhilsec.com</a>
+    <a href="https://github.com/nikhilsankhla">github.com/nikhilsankhla</a>
+    <a href="mailto:nikhilsankhla.cybersec@gmail.com">nikhilsankhla.cybersec@gmail.com</a>
+  </footer>
+
 </div>
-
-
-<div>
-<img src="Profile_Pic.jpg" class="img-thumbnail" width="304px" height="800px" style="margin:50;" align="left">
-<div class="container-fluid">
-<h1 align="middle" style="margin:40;"> NIKHIL SANKHLA </h1>
-
-<h3 align="left-side" style="margin:20;"> Capsule Bio </h3>
-
-<p align="justify" style="margin:20;">
-
-I am currently an Information Technology Undergraduate Student at Maharaja Agrasain Institute of Technology, Delhi , India and actively looking for Internship in Summer 2019. Prior to joining.
-I have some fascinating communacation skills and also a good public speaker quality. .Having a bit of experience in cryptocurrency MArket. I am too much into politics and religion stuff, currently i am leading BACE official society of MAIT,Rohini.i have organised an event of Asia's biggest motivation speaker ,Vivek Bindra conducted by the WAVE society of MAIT. I am also working in National level Marketing company ,Being Healthy as a marketer.Already worked as a crew member in Miss & Mr. Teen India 2017.  I have 2 gold medals and 1 silver medal in state level Yoga competition Delhi. 
-Feel free to contact me if you find me a good fit for your organization.
-
-</p>
-</div>
-
-</div>
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
