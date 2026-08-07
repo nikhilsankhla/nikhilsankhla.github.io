@@ -66,6 +66,9 @@
   footer{margin-top:60px; padding-top:24px; border-top:1px solid var(--border);
     color:var(--muted); font-size:.85rem; display:flex; flex-wrap:wrap; gap:6px 18px; align-items:center}
   footer a{color:var(--muted); text-decoration:none} footer a:hover{color:var(--accent)}
+  .avatar{width:104px;height:104px;border-radius:50%;object-fit:cover;
+    border:2px solid var(--border); box-shadow:0 0 0 5px rgba(34,211,238,.08);
+    margin-bottom:22px; display:block; background:var(--panel)}
   @media (max-width:560px){ h1{font-size:2.1rem} .wrap{padding:48px 20px} }
 </style>
 </head>
@@ -73,6 +76,7 @@
 <div class="wrap">
 
   <header>
+    <img class="avatar" src="avatar.jpg" alt="Nikhil Sankhla" width="104" height="104">
     <div class="kicker">Security Engineer · Sydney</div>
     <h1>Nikhil Sankhla</h1>
     <p class="lede">
